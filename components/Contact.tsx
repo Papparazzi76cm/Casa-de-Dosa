@@ -38,11 +38,11 @@ const Contact: React.FC = () => {
             <h3 className="text-2xl font-bold text-white mb-6">Ponte en Contacto</h3>
             <div className="space-y-6">
               <ContactInfoItem icon={<MapPinIcon />} title="Dirección">
-                Calle de la Fusión, 123<br/>
-                28013 Madrid, España
+                Paseo de Zorrilla 23<br/>
+                47007 Valladolid, España
               </ContactInfoItem>
               <ContactInfoItem icon={<PhoneIcon />} title="Teléfono">
-                <a href="tel:+34912345678" className="hover:text-amber-400 transition-colors">+34 912 345 678</a>
+                <a href="tel:+34983642392" className="hover:text-amber-400 transition-colors">+34 983 64 23 92</a>
               </ContactInfoItem>
               <ContactInfoItem icon={<MailIcon />} title="Email">
                 <a href="mailto:reservas@casadedosa.es" className="hover:text-amber-400 transition-colors">reservas@casadedosa.es</a>
@@ -54,8 +54,7 @@ const Contact: React.FC = () => {
             </div>
           </div>
           <div className="lg:w-1/2 h-96 lg:h-auto rounded-lg overflow-hidden">
-             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.668545805201!2d-3.7058861!3d40.4161721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42287e07e9e4ab%3A0x28096c4df35e6481!2sPlaza%20Mayor!5e0!3m2!1sen!2ses"
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2981.564417578505!2d-4.732877784566779!3d41.64344448004739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd476de6d6283733%3A0x7d0a2f43e33f6792!2sP.o%20de%20Zorrilla%2C%2023%2C%2047007%20Valladolid%2C%20Espa%C3%B1a!5e0!3m2!1ses!2ses!4v1626884639536!5m2!1ses!2ses"
               className="w-full h-full"
               style={{ border: 0 }}
               allowFullScreen={true}

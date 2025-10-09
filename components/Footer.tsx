@@ -1,6 +1,7 @@
 import React from 'react';
 import { SocialIcons } from './icons/SocialIcons';
 import { smoothScrollTo } from '../utils/scrolling';
+import { logoBase64 } from '../constants';
 
 const Footer: React.FC = () => {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -27,7 +28,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About */}
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-xl font-bold text-white mb-4" style={{fontFamily: "'Playfair Display', serif"}}>Casa de Dosa</h3>
+            <img src={logoBase64} alt="Casa de Dosa Logo" className="h-32 w-auto object-contain mb-4" />
             <p className="text-slate-400 max-w-md">
               Una experiencia culinaria única que celebra la fusión de los vibrantes sabores de la India y la rica tradición de España.
             </p>
@@ -54,7 +55,10 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="mt-8 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-slate-500 text-sm">&copy; {new Date().getFullYear()} Casa de Dosa. Todos los derechos reservados.</p>
+          <div className="text-center md:text-left">
+            <p className="text-slate-500 text-sm">&copy; {new Date().getFullYear()} Casa de Dosa. Todos los derechos reservados.</p>
+            <p className="text-slate-500 text-sm mt-1">Grupo Kokopeli</p>
+          </div>
           <div className="mt-4 md:mt-0">
             <SocialIcons />
           </div>

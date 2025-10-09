@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { smoothScrollTo } from '../utils/scrolling';
+import { logoBase64 } from '../constants';
 
 const NavLink: React.FC<{ href: string; children: React.ReactNode; onClick: (e: React.MouseEvent<HTMLAnchorElement>) => void }> = ({ href, children, onClick }) => (
   <a
@@ -56,8 +57,8 @@ const Header: React.FC = () => {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0">
-            <a href="#home" onClick={(e) => handleNavClick(e, '#home')} className="text-white text-2xl font-bold" style={{fontFamily: "'Playfair Display', serif"}}>
-              Casa de Dosa
+            <a href="#home" onClick={(e) => handleNavClick(e, '#home')}>
+              <img src={logoBase64} alt="Casa de Dosa Logo" className="h-16 w-auto object-contain" />
             </a>
           </div>
           <div className="hidden md:block">

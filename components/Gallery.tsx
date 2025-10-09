@@ -56,7 +56,7 @@ const Gallery: React.FC = () => {
       {
         // Use rootMargin to start the effect slightly before it enters the screen
         // and stop it slightly after it leaves, preventing visual jumps.
-        rootMargin: '100px 0px 100px 0px',
+        rootMargin: '200px 0px 200px 0px',
       }
     );
     
