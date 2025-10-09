@@ -1,9 +1,11 @@
-
 export enum MenuCategory {
-  Starters = 'Entrantes',
-  Mains = 'Principales',
-  Desserts = 'Postres',
-  Drinks = 'Bebidas'
+  Embutidos = 'Embutidos y Quesos',
+  FastFood = 'Fast Food',
+  Ensaladas = 'Ensaladas y Verduras',
+  Carnes = 'Carnes',
+  PescadosYArroces = 'Del Mar y Arroces',
+  Guarniciones = 'Guarniciones',
+  Postres = 'Broche Final'
 }
 
 export interface MenuItem {

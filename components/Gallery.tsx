@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { galleryImages } from '../constants';
 import { useIntersectionObserver } from './hooks/useIntersectionObserver';
 import { ChevronLeftIcon, ChevronRightIcon } from './icons/Icons';
+import { galleryBgImage } from '../assets/images';
 
 const Gallery: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -93,7 +94,7 @@ const Gallery: React.FC = () => {
       ref={sectionRef}
       className="relative py-20 bg-cover overflow-hidden"
       style={{
-        backgroundImage: "url('https://picsum.photos/id/488/1920/1080?blur=2')",
+        backgroundImage: `url('${galleryBgImage}')`,
         backgroundPosition: `center ${parallaxY}px`,
       }}
     >

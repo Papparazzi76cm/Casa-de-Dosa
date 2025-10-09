@@ -1,6 +1,7 @@
 
 import React, { useRef } from 'react';
 import { useIntersectionObserver } from './hooks/useIntersectionObserver';
+import { aboutImage } from '../assets/images';
 
 const About: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -18,7 +19,7 @@ const About: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="lg:w-1/2">
             <img 
-              src="https://picsum.photos/id/119/800/600" 
+              src={aboutImage}
               alt="Interior de Casa de Dosa"
               className="rounded-lg shadow-2xl object-cover w-full h-full"
             />

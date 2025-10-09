@@ -1,73 +1,188 @@
 import { MenuCategory, MenuItem } from './types';
-
-export const logoBase64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAVGAzQDASIAAhEBAxEB/8QAHQAAAQQDAQEAAAAAAAAAAAAAAAQFBgcCAwgBCf/EAGkQAAEDAwIDBgUGCQcICgYNBQECAwQABREGEiExBxNBURQiYXEIFCJSU4GRoRYjMlKSscHR0wgkNENWYnOistLwGDhERldlc4OTo+FERVWTpMNkg4W0wsTxVmV2haOkw9PjJ2bV/8QAGwEBAAIDAQEAAAAAAAAAAAAAAAIDAAEEBQb/xAA5EQEAAgEDAgMGBQIGAgMBAAAAAQIDBBEFEiExE0FRBhQiYXGRFUKBobHB0RUy8ELhI0JiFjRTgpL/2gAMAwEAAhEDEQA/APxOUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgBSlKAUpSgFKUoBSlKAUpSgBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgFKUoBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgFKUoBSlKAUpSgBSlKAUpSgFKUoBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSlKAUpSgBSl-';
+import { menuImages, galleryImagesData } from './assets/images';
 
 export const menuItems: MenuItem[] = [
+  // Embutidos y Quesos
   {
-    name: 'Patatas Bravas con Garam Masala',
-    description: 'Crujientes patatas bravas con una salsa picante infusionada con especias indias.',
-    price: '9.50€',
-    category: MenuCategory.Starters,
-    imageUrl: 'https://picsum.photos/id/102/400/400',
+    name: 'Jamón Ibérico',
+    description: 'Finas lonchas de jamón ibérico de bellota, curación de 36 meses. Un clásico inmejorable.',
+    price: '22.00€',
+    category: MenuCategory.Embutidos,
+    imageUrl: menuImages.jamonIberico,
   },
   {
-    name: 'Croquetas de Pollo Tikka',
-    description: 'Cremosas croquetas rellenas de pollo tikka masala, una explosión de sabor.',
-    price: '11.00€',
-    category: MenuCategory.Starters,
-    imageUrl: 'https://picsum.photos/id/203/400/400',
-  },
-  {
-    name: 'Paella de Cordero Rogan Josh',
-    description: 'Arroz bomba cocinado a la perfección con tierno cordero en salsa Rogan Josh.',
-    price: '24.00€',
-    category: MenuCategory.Mains,
-    imageUrl: 'https://picsum.photos/id/305/400/400',
-  },
-  {
-    name: 'Dosa Rellena de Chorizo Ibérico',
-    description: 'Crujiente dosa de arroz y lentejas rellena de chorizo ibérico salteado con cebolla y pimientos.',
+    name: 'Selección de Ibéricos',
+    description: 'Tabla variada con los mejores embutidos ibéricos de la región: lomo, chorizo y salchichón.',
     price: '18.50€',
-    category: MenuCategory.Mains,
-    imageUrl: 'https://picsum.photos/id/401/400/400',
-  },
-   {
-    name: 'Bacalao al Pil-Pil con Curry de Coco',
-    description: 'Lomo de bacalao confitado en aceite de oliva y ajo, servido sobre una suave salsa de curry y coco.',
-    price: '22.50€',
-    category: MenuCategory.Mains,
-    imageUrl: 'https://picsum.photos/id/543/400/400',
+    category: MenuCategory.Embutidos,
+    imageUrl: menuImages.tablaIbericos,
   },
   {
-    name: 'Tarta de Queso con Mango Lassi',
-    description: 'Una versión cremosa de la tarta de queso, con una capa superior de reducción de mango lassi.',
+    name: 'Selección de Quesos',
+    description: 'Un viaje por los sabores de España con nuestra selección de quesos artesanales y mermeladas caseras.',
+    price: '16.00€',
+    category: MenuCategory.Embutidos,
+    imageUrl: menuImages.tablaQuesos,
+  },
+
+  // Fast Food
+  {
+    name: 'Hamburguesa de Buey',
+    description: 'Carne de buey de primera calidad, pan brioche, queso cheddar y nuestra salsa secreta Vulcan.',
+    price: '15.50€',
+    category: MenuCategory.FastFood,
+    imageUrl: menuImages.hamburguesa,
+  },
+  {
+    name: 'Patatas Bravas',
+    description: 'Crujientes por fuera, tiernas por dentro, con una salsa brava casera ligeramente picante.',
     price: '8.00€',
-    category: MenuCategory.Desserts,
-    imageUrl: 'https://picsum.photos/id/431/400/400',
+    category: MenuCategory.FastFood,
+    imageUrl: menuImages.patatasBravas,
   },
   {
-    name: 'Churros con Chocolate y Cardamomo',
-    description: 'Churros tradicionales servidos con un espeso chocolate caliente especiado con cardamomo.',
+    name: 'Mini Burger',
+    description: 'Dos mini hamburguesas de buey, perfectas para compartir o como aperitivo.',
+    price: '10.50€',
+    category: MenuCategory.FastFood,
+    imageUrl: menuImages.miniBurger,
+  },
+  {
+    name: 'Torrezno de Soria',
+    description: 'Panceta de cerdo frita hasta alcanzar una corteza crujiente y un interior jugoso. Tradición pura.',
+    price: '9.50€',
+    category: MenuCategory.FastFood,
+    imageUrl: menuImages.torrezno,
+  },
+  {
+    name: 'Croquetas de Pollo Curry Mali',
+    description: 'Cremosas croquetas con un toque exótico de pollo al curry estilo Mali. Una fusión sorprendente.',
+    price: '11.00€',
+    category: MenuCategory.FastFood,
+    imageUrl: menuImages.croquetasPollo,
+  },
+  {
+    name: 'Croquetas de Kimchi y Mango',
+    description: 'El equilibrio perfecto entre el picante fermentado del kimchi y el dulzor del mango fresco.',
+    price: '11.50€',
+    category: MenuCategory.FastFood,
+    imageUrl: menuImages.croquetasKimchi,
+  },
+  {
+    name: 'Samosas Vegetales',
+    description: 'Empanadillas crujientes rellenas de una mezcla especiada de patatas y guisantes.',
+    price: '9.00€',
+    category: MenuCategory.FastFood,
+    imageUrl: menuImages.samosas,
+  },
+  {
+    name: 'Gyoza de Ropa Vieja',
+    description: 'Empanadillas japonesas rellenas del clásico guiso de ropa vieja, servidas con su jugo.',
+    price: '12.00€',
+    category: MenuCategory.FastFood,
+    imageUrl: menuImages.gyozas,
+  },
+
+  // Ensaladas y Verduras
+  {
+    name: 'Burrata con Tartar de Fruta de Dragón y Manzana',
+    description: 'Burrata fresca sobre un lecho de tartar exótico de fruta de dragón y manzana verde.',
+    price: '14.00€',
+    category: MenuCategory.Ensaladas,
+    imageUrl: menuImages.burrata,
+  },
+  {
+    name: 'Ensaladilla de Gamba con Alioli',
+    description: 'Nuestra versión de la ensaladilla rusa, con gambas frescas y un suave alioli casero.',
+    price: '12.50€',
+    category: MenuCategory.Ensaladas,
+    imageUrl: menuImages.ensaladilla,
+  },
+  {
+    name: 'Crema de Temporada',
+    description: 'Pregunta por nuestra crema del día, elaborada con las verduras más frescas del mercado.',
+    price: '8.50€',
+    category: MenuCategory.Ensaladas,
+    imageUrl: menuImages.cremaVerduras,
+  },
+
+  // Carnes
+  {
+    name: 'Onglet de Angus con Irish Champ',
+    description: 'Corte de ternera Angus jugoso y tierno, acompañado de puré de patata irlandés y jugo de carne.',
+    price: '25.00€',
+    category: MenuCategory.Carnes,
+    imageUrl: menuImages.ongletAngus,
+  },
+  {
+    name: 'Rulo de Lechazo con Boletus y Jugo de Granada',
+    description: 'Tierno rulo de cordero lechal deshuesado, con salsa de boletus y un toque agridulce de granada.',
+    price: '28.00€',
+    category: MenuCategory.Carnes,
+    imageUrl: menuImages.ruloLechazo,
+  },
+
+  // Del Mar y Arroces
+  {
+    name: 'Tartar de Atún Rojo, Sandía y Ponzu de Tomate',
+    description: 'Refrescante tartar de atún rojo de almadraba con dados de sandía y una emulsión de ponzu y tomate.',
+    price: '21.00€',
+    category: MenuCategory.PescadosYArroces,
+    imageUrl: menuImages.tartarAtun,
+  },
+  {
+    name: 'Rodaballo con Puré de Coliflor y Salsa Ponzu',
+    description: 'Lomo de rodaballo a la plancha con piel crujiente, sobre un cremoso puré de coliflor y salsa ponzu.',
+    price: '26.00€',
+    category: MenuCategory.PescadosYArroces,
+    imageUrl: menuImages.rodaballo,
+  },
+  {
+    name: 'Arroz de Marisco',
+    description: 'Arroz meloso con una selección de los mejores mariscos frescos del día.',
+    price: '23.00€',
+    category: MenuCategory.PescadosYArroces,
+    imageUrl: menuImages.arrozMarisco,
+  },
+
+  // Guarniciones
+  {
+    name: 'Patatas Fritas',
+    description: 'Patatas fritas caseras, doradas y crujientes. El acompañamiento perfecto.',
+    price: '5.00€',
+    category: MenuCategory.Guarniciones,
+    imageUrl: menuImages.patatasFritas,
+  },
+  {
+    name: 'Boniato Frito',
+    description: 'Bastones de boniato frito con un toque de sal en escamas. Dulce y salado a la vez.',
+    price: '6.00€',
+    category: MenuCategory.Guarniciones,
+    imageUrl: menuImages.boniatoFrito,
+  },
+
+  // Broche Final
+  {
+    name: 'Tarta de Quesos',
+    description: 'Cremosa y horneada al estilo tradicional, con una base de galleta artesana.',
     price: '7.50€',
-    category: MenuCategory.Desserts,
-    imageUrl: 'https://picsum.photos/id/175/400/400',
+    category: MenuCategory.Postres,
+    imageUrl: menuImages.tartaQueso,
   },
   {
-    name: 'Sangría de Azafrán y Cítricos',
-    description: 'Nuestra sangría especial con vino blanco, azafrán, naranja y un toque de jengibre.',
-    price: '15.00€ (Jarra)',
-    category: MenuCategory.Drinks,
-    imageUrl: 'https://picsum.photos/id/1060/400/400',
+    name: 'Torrija con Espuma de Vainilla',
+    description: 'Torrija caramelizada, empapada en leche y canela, con una ligera espuma de vainilla de Tahití.',
+    price: '8.00€',
+    category: MenuCategory.Postres,
+    imageUrl: menuImages.torrija,
+  },
+  {
+    name: 'Pannacotta con Chutney de Mango',
+    description: 'Clásica pannacotta italiana servida con un chutney casero de mango con un toque especiado.',
+    price: '7.00€',
+    category: MenuCategory.Postres,
+    imageUrl: menuImages.pannacotta,
   },
 ];
 
-export const galleryImages = [
-    { id: 1, url: 'https://picsum.photos/id/237/800/600', alt: 'Plato de fusión exquisito' },
-    { id: 2, url: 'https://picsum.photos/id/106/800/600', alt: 'Ambiente elegante del restaurante' },
-    { id: 3, url: 'https://picsum.photos/id/312/800/600', alt: 'Cóctel artesanal dorado' },
-    { id: 4, url: 'https://picsum.photos/id/433/800/600', alt: 'Detalle de la decoración del local' },
-    { id: 5, url: 'https://picsum.photos/id/488/800/600', alt: 'Chef preparando un plato' },
-    { id: 6, url: 'https://picsum.photos/id/553/800/600', alt: 'Postre de fusión india-española' },
-    { id: 7, url: 'https://picsum.photos/id/659/800/600', alt: 'Detalle de plato con hierbas' },
-    { id: 8, url: 'https://picsum.photos/id/776/800/600', alt: 'Vista amplia del comedor' },
-];
+export const galleryImages = galleryImagesData;

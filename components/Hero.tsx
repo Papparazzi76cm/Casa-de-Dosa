@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import { heroBgImage } from '../assets/images';
 
 const Hero: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -9,7 +10,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section id="home" className="relative h-screen flex items-center justify-center text-center text-white bg-cover bg-center" style={{ backgroundImage: "url('https://picsum.photos/id/21/1920/1080')" }}>
+    <section id="home" className="relative h-screen flex items-center justify-center text-center text-white bg-cover bg-center" style={{ backgroundImage: `url('${heroBgImage}')` }}>
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className={`relative z-10 p-4 transition-all duration-1000 ease-out ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4 leading-tight">

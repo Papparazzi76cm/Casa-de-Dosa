@@ -1,7 +1,7 @@
 import React from 'react';
 import { SocialIcons } from './icons/SocialIcons';
 import { smoothScrollTo } from '../utils/scrolling';
-import { logoBase64 } from '../constants';
+import { logoImage } from '../assets/images';
 
 const Footer: React.FC = () => {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About */}
           <div className="col-span-1 md:col-span-2">
-            <img src={logoBase64} alt="Casa de Dosa Logo" className="h-32 w-auto object-contain mb-4" />
+            <img src={logoImage} alt="Casa de Dosa Logo" className="h-32 w-auto object-contain mb-4" />
             <p className="text-slate-400 max-w-md">
               Una experiencia culinaria única que celebra la fusión de los vibrantes sabores de la India y la rica tradición de España.
             </p>
